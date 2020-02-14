@@ -1,0 +1,41 @@
+{
+    "name": "jupyterlab-execute-command",
+    "version": "0.1.0",
+    "description": "execute command for jupyterlab",
+    "keywords": [
+        "jupyter",
+        "jupyterlab",
+        "jupyterlab-extension"
+    ],
+    "homepage": "https://github.com/philopon/jupyterlab-execute-command",
+    "bugs": {
+        "url": "https://github.com/philopon/jupyterlab-execute-command/issues"
+    },
+    "license": "BSD-3-Clause",
+    "author": "Hirotomo Moriwaki",
+    "files": [
+        "lib/**/*.{d.ts,js}"
+    ],
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/philopon/jupyterlab-execute-command.git"
+    },
+    "scripts": {
+        "build": "tsc",
+        "clean": "rimraf lib tsconfig.tsbuildinfo",
+        "prepare": "jlpm run clean && jlpm run build",
+        "watch": "tsc -w"
+    },
+    "dependencies": {
+        "@jupyterlab/application": "^1.1"
+    },
+    "devDependencies": {
+        "rimraf": "^2.6.1",
+        "typescript": "~3.7.0"
+    },
+    "jupyterlab": {
+        "extension": true
+    }
+}
