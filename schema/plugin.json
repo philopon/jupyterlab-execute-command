@@ -1,0 +1,30 @@
+{
+    "jupyter.lab.setting-icon-class": "jp-SettingsIcon",
+    "jupyter.lab.setting-icon-label": "Execute Command",
+    "title": "Execute Command",
+    "description": "run command on server",
+    "properties": {
+        "commands": {
+            "title": "commands",
+            "description": "{\n    \"name\": \"command-name\",\n    \"category\": \"Palette category\",\n    \"label\": \"Command Label\",\n    \"command\": \"cp $JUPYTER_SERVER_ROOT/{{path}} $JUPYTER_SERVER_ROOT/{{path}}.bak\",\n    \"raw\": \"false\"\n}",
+            "type": "array",
+            "items": { "$ref": "#/definitions/entry" },
+            "default": []
+        }
+    },
+    "definitions": {
+        "entry": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+                "name": { "type": "string" },
+                "label": { "type": "string" },
+                "category": { "type": "string" },
+                "command": { "type": "string" },
+                "raw": { "type": "boolean" }
+            }
+        }
+    },
+    "additionalProperties": false,
+    "type": "object"
+}
